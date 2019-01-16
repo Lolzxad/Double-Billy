@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{BBF2DE65-0E5F-2A69-65FD-7555C6832D23}</ProjectGuid>
+    <ProjectGuid>{0083BCE9-F617-2DD7-19F0-8750F943EA1D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,18 +61,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Gif.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Button_Interact.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_EscMenu.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Game_Menu.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Gauge_Script.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Main_Menu.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Player_Stats.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/a.ahmedyahia/Documents/Double Billy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/a.ahmedyahia/Documents/Double Billy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/a.ahmedyahia/Documents/Double Billy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/a.ahmedyahia/Documents/Double Billy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -273,10 +278,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.12f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/a.ahmedyahia/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/edlal/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/a.ahmedyahia/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/edlal/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
