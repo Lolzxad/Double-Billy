@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_EscMenu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Game_Menu.cs" />
-    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Gauge_Script.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Life_Script.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Main_Menu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Player_Stats.cs" />
     <Reference Include="UnityEditor.StandardEvents">

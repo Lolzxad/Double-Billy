@@ -8,7 +8,6 @@ public class Naga_EscMenu : MonoBehaviour
     public GameObject restartMenu;
     public GameObject escapeMenu;
     public GameObject playerUI;
-    public GameObject dialogUI;
 
     void Awake()
     {
@@ -21,7 +20,7 @@ public class Naga_EscMenu : MonoBehaviour
         if (!escapeMenu.activeInHierarchy)
         {
 
-            if (Input.GetButtonDown("Cancel") && !dialogUI.activeInHierarchy)
+            if (Input.GetButtonDown("Menu"))
             {
                 escapeMenu.SetActive(true);
                 playerUI.SetActive(false);
@@ -33,7 +32,7 @@ public class Naga_EscMenu : MonoBehaviour
         else if(escapeMenu.activeInHierarchy && !restartMenu.activeInHierarchy)
         {
 
-            if (Input.GetButtonDown("Cancel"))
+            if (Input.GetButtonDown("Menu"))
             {
                 restartMenu.SetActive(false);
                 escapeMenu.SetActive(false);
