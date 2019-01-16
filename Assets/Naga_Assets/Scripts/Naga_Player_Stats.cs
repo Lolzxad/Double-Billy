@@ -10,40 +10,61 @@ public class Naga_Player_Stats : MonoBehaviour
     //Vie
     [HideInInspector]
     public float percentHP;
-    private int basicLifePoints = 100;
+    private float currentPercentHP;
+    private int basicLifePoints = 50;
     [SerializeField]
     private float currentLife;
-
-    //Light
-    [HideInInspector]
-    public float percentLight;
-    private int LightMax = 50;
     [SerializeField]
-    private float currentLight;
-
-    //Exp
-    [HideInInspector]
-    public float percentExp;
-    private int expMax = 2000;
+    private int lP = 0;
     [SerializeField]
-    private float currentExp = 0;
-    public string lvl;
-
+    private int p1Score = 0;
+    [SerializeField]
+    private int p1Money = 0;
 
     // Use this for initialization
     void Start ()
     {
         currentLife = basicLifePoints;
-        currentLight = LightMax;
-        lvl = "1";
-        GameObject.Find("Level - Text").GetComponent<Text>().text = lvl;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        percentHP = currentLife / basicLifePoints;
-        percentLight = currentLight / LightMax;
-        percentExp = currentExp / expMax;
+        GameObject.Find("LP - Text").GetComponent<Text>().text = lP.ToString();
+        GameObject.Find("P1Score - Text").GetComponent<Text>().text = p1Score.ToString();
+        GameObject.Find("P1$Score - Text").GetComponent<Text>().text = p1Money.ToString();
+
+        currentPercentHP = currentLife / basicLifePoints;
+
+        if (currentPercentHP > 0.8f)
+        {
+            percentHP = 1;
+        }
+
+        else if (currentPercentHP > 0.6f && currentPercentHP <= 0.8f)
+        {
+            percentHP = 0.8f;
+        }
+
+        else if (currentPercentHP > 0.4f && currentPercentHP <= 0.6f)
+        {
+            percentHP = 0.6f;
+        }
+
+        else if (currentPercentHP > 0.2f && currentPercentHP <= 0.4f)
+        {
+            percentHP = 0.4f;
+        }
+
+        else if (currentPercentHP > 0 && currentPercentHP <= 0.2f)
+        {
+            percentHP = 0.2f;
+        }
+
+        else if (currentPercentHP <= 0)
+        {
+            percentHP = 0;
+        }
+
     }
 }
