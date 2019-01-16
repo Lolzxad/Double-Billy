@@ -65,7 +65,6 @@
     <Compile Include="Assets\_Scripts\ELR_Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\_Scripts\ELR_Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\_Scripts\LUE_Scripts\EnemyHealth.cs" />
-    <Compile Include="Assets\Adel_Assets\Scripts\Perspective2DSortMode.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_EscMenu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Game_Menu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Life_Script.cs" />
@@ -82,6 +81,12 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/a.ahmedyahia/Documents/Double-Billy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/a.ahmedyahia/Documents/Double-Billy/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/a.ahmedyahia/Documents/Double-Billy/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
