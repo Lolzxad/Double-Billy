@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Far Buildings
+    uniqueID: 2755896119
+    locked: 0
+  - name: Back Buildings
+    uniqueID: 2998879275
+    locked: 0
+  - name: Foreground
+    uniqueID: 257862993
+    locked: 0
+  - name: Props
+    uniqueID: 537759499
+    locked: 0
