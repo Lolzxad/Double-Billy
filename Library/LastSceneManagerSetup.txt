@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Naga_Assets/Scenes/Naga_UI_Scene.unity
+=======
+- path: Assets/_Scenes/LUE_TestScene.unity
+>>>>>>> Zbra
   isLoaded: 1
   isActive: 1
