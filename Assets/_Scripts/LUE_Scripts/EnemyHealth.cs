@@ -11,18 +11,20 @@ public class EnemyHealth : MonoBehaviour
     public GameObject groundCheck;
     public GameObject leftSide;
     public GameObject rightSide;
-    private Collider2D groundCollider;
-    private Collider2D leftCollider;
-    private Collider2D rightCollider;
+    public GameObject rangeGrab;
+    public GameObject rangePunch;
+    public GameObject rangeKick;
+    private Collider groundCollider;
+    private Collider leftCollider;
+    private Collider rightCollider;
+    private Collider rangeGrabCollider;
+    private Collider rangePunchCollider;
+    private Collider rangeKickCollider;
 
     //Stats de l'ennemi 
     [SerializeField]
     float enemyMaxHealth = 100f;
     float enemyHealth = 75f;
-    [SerializeField]
-    float enemyRegenPerSec = 30f;
-    [SerializeField]
-    float enemyIdleHealthLoss = 60f;
     [SerializeField]
     float enemyHit = 100f;
 
@@ -30,54 +32,17 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyHealth = enemyMaxHealth;
         rb2d = GetComponent<Rigidbody2D>();
-        groundCollider = groundCheck.GetComponent<Collider2D>();
-        leftCollider = leftSide.GetComponent<Collider2D>();
-        rightCollider = rightSide.GetComponent<Collider2D>();
-    }
-
-    private void FixedUpdate()
-    {
-        //if (groundCollider)
-
-        //fait monter la vie :      à remplacer par "si les enchaînements se passent bien"
-        if (Input.GetKey(KeyCode.Space))
-        {
-            enemyHealth += enemyRegenPerSec * Time.deltaTime;
-        }
-
-        //fait descendre la vie :       à remplacer par "si l'ennemi ne fait rien"
-        if (!Input.anyKey)
-        {
-            enemyHealth -= enemyIdleHealthLoss * Time.deltaTime;
-        }
-
-        //l'ennemi se prend un coup (sur appui de  : à remplacer par "si l'ennemi ne fait rien")
-        if (Input.GetMouseButtonDown(0))
-        {
-            enemyHealth -= enemyHit;
-        }
-
-        //empêche la vie de passer le maximum de vie
-        if (enemyHealth >= enemyMaxHealth)
-        {
-            enemyHealth = enemyMaxHealth;
-        }
-
-        //si la vie arrive à 0, l'ennemi meurt (dans la console pour l'instant)
-        if (enemyHealth <= 0)
-        {
-            print("T'es mort !");
-
-            //empêche de passer trop loin sous 0 pour les tests
-            enemyHealth = 0;
-        }
+        groundCollider = groundCheck.GetComponent<Collider>();
+        leftCollider = leftSide.GetComponent<Collider>();
+        rightCollider = rightSide.GetComponent<Collider>();
+        rangeGrabCollider = rangeGrab.GetComponent<Collider>();
+        rangePunchCollider = rangePunch.GetComponent<Collider>();
+        rangeKickCollider = rangeKick.GetComponent<Collider>();
     }
 
     public void EnemyHealthLoss(float hitReceived)
     {
         enemyHealth -= hitReceived;
-
-        //rb2d.velocity=
 
         //si la vie arrive à 0, l'ennemi meurt (dans la console pour l'instant)          ramener animation de mort
         if (enemyHealth <= 0)
