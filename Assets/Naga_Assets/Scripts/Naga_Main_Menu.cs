@@ -9,7 +9,10 @@ public class Naga_Main_Menu : MonoBehaviour
     [SerializeField]
     private int play;
     [SerializeField]
-    private int option;
+    private int score;
+    [SerializeField]
+    private int play2;
+
 
     public GameObject quitMenu;
     [SerializeField]
@@ -73,9 +76,14 @@ public class Naga_Main_Menu : MonoBehaviour
         SceneManager.LoadScene(play);
     }
 
-    public void Option()
+    public void Play2()
     {
-        SceneManager.LoadScene(option);
+        SceneManager.LoadScene(play2);
+    }
+
+    public void Score()
+    {
+        SceneManager.LoadScene(score);
     }
 
     public void Quit()
