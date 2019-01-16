@@ -15,6 +15,8 @@ public class Naga_Main_Menu : MonoBehaviour
 
 
     public GameObject quitMenu;
+    public GameObject startMenu;
+    public GameObject buttons;
     [SerializeField]
     private GameObject firstButton;
     [SerializeField]
@@ -48,7 +50,7 @@ public class Naga_Main_Menu : MonoBehaviour
             storeSelected = eS.firstSelectedGameObject;
         }
 
-        if (!quitMenu.activeInHierarchy)
+        if (startMenu.activeInHierarchy && !quitMenu.activeInHierarchy)
         {
 
             if (Input.GetButtonDown("Cancel"))
@@ -57,9 +59,37 @@ public class Naga_Main_Menu : MonoBehaviour
                 eS.SetSelectedGameObject(firstQuitMenuButton);
             }
 
+            if (Input.GetButtonDown("Menu"))
+            {
+                buttons.SetActive(true);
+                startMenu.SetActive(false);
+                eS.SetSelectedGameObject(firstButton);
+            }
+
         }
 
-        else if (quitMenu.activeInHierarchy)
+        else if (startMenu.activeInHierarchy && quitMenu.activeInHierarchy)
+        {
+
+            if (Input.GetButtonDown("Cancel") || Input.GetButtonDown("Menu"))
+            {
+                quitMenu.SetActive(false);
+            }
+
+        }
+
+        else if (!startMenu.activeInHierarchy && !quitMenu.activeInHierarchy)
+        {
+
+            if (Input.GetButtonDown("Cancel"))
+            {
+                startMenu.SetActive(true);
+                buttons.SetActive(false);
+            }
+
+        }
+
+        else if (!startMenu.activeInHierarchy && quitMenu.activeInHierarchy)
         {
 
             if (Input.GetButtonDown("Cancel"))
@@ -69,6 +99,8 @@ public class Naga_Main_Menu : MonoBehaviour
             }
 
         }
+
+
     }
 
     public void Play()

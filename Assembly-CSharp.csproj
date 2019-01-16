@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Button_Interact.cs" />
-    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Dialog.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_EscMenu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Game_Menu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Gauge_Script.cs" />
