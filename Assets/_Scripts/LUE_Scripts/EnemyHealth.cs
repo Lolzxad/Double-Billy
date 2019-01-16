@@ -1,62 +1,94 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public Image image;
+    private Rigidbody2D rb2d;
+    private bool isGrounded;
 
-    //Stats du joueur 
-    [SerializeField]
-    float playerMaxHealth = 300f;
-    float playerHealth = 150f;
-    [SerializeField]
-    float playerRegenPerSec = 30f;
-    [SerializeField]
-    float playerIdleHealthLoss = 60f;
-    [SerializeField]
-    float playerHit = 100f;
+    //Initialisation enfants
+    public GameObject groundCheck;
+    public GameObject leftSide;
+    public GameObject rightSide;
+    private Collider2D groundCollider;
+    private Collider2D leftCollider;
+    private Collider2D rightCollider;
 
+    //Stats de l'ennemi 
+    [SerializeField]
+    float enemyMaxHealth = 100f;
+    float enemyHealth = 75f;
+    [SerializeField]
+    float enemyRegenPerSec = 30f;
+    [SerializeField]
+    float enemyIdleHealthLoss = 60f;
+    [SerializeField]
+    float enemyHit = 100f;
 
+    private void Start()
+    {
+        enemyHealth = enemyMaxHealth;
+        rb2d = GetComponent<Rigidbody2D>();
+        groundCollider = groundCheck.GetComponent<Collider2D>();
+        leftCollider = leftSide.GetComponent<Collider2D>();
+        rightCollider = rightSide.GetComponent<Collider2D>();
+    }
 
     private void FixedUpdate()
     {
+        //if (groundCollider)
+
         //fait monter la vie :      à remplacer par "si les enchaînements se passent bien"
         if (Input.GetKey(KeyCode.Space))
         {
-            playerHealth += playerRegenPerSec * Time.deltaTime;
+            enemyHealth += enemyRegenPerSec * Time.deltaTime;
         }
 
-        //fait descendre la vie :       à remplacer par "si le joueur ne fait rien"
+        //fait descendre la vie :       à remplacer par "si l'ennemi ne fait rien"
         if (!Input.anyKey)
         {
-            playerHealth -= playerIdleHealthLoss * Time.deltaTime;
+            enemyHealth -= enemyIdleHealthLoss * Time.deltaTime;
         }
 
-        //le joueur se prend un coup (sur appui de  : à remplacer par "si le joueur ne fait rien")
+        //l'ennemi se prend un coup (sur appui de  : à remplacer par "si l'ennemi ne fait rien")
         if (Input.GetMouseButtonDown(0))
         {
-            playerHealth -= playerHit;
+            enemyHealth -= enemyHit;
         }
 
         //empêche la vie de passer le maximum de vie
-        if (playerHealth >= playerMaxHealth)
+        if (enemyHealth >= enemyMaxHealth)
         {
-            playerHealth = playerMaxHealth;
+            enemyHealth = enemyMaxHealth;
         }
 
-        //si la vie arrive à 0, le joueur meurt (dans la console pour l'instant)
-        if (playerHealth <= 0)
+        //si la vie arrive à 0, l'ennemi meurt (dans la console pour l'instant)
+        if (enemyHealth <= 0)
         {
             print("T'es mort !");
 
             //empêche de passer trop loin sous 0 pour les tests
-            playerHealth = 0;
+            enemyHealth = 0;
         }
-
-        //fait bouger le canvas en fonction de la vie
-        image.fillAmount = playerHealth / playerMaxHealth;
     }
+
+    public void EnemyHealthLoss(float hitReceived)
+    {
+        enemyHealth -= hitReceived;
+
+        //rb2d.velocity=
+
+        //si la vie arrive à 0, l'ennemi meurt (dans la console pour l'instant)          ramener animation de mort
+        if (enemyHealth <= 0)
+        {
+            print(this + " est mort !");
+
+            //empêche de passer trop loin sous 0 pour les tests
+            enemyHealth = 0;
+        }
+    }
+
+    
 
 }
