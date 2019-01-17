@@ -44,7 +44,7 @@ public class EnemyBehavior : MonoBehaviour {
                 if (canHit)
                 {
                     stopped = false;
-                    StartCoroutine(Hit(25));
+                    StartCoroutine(Hit(2));
                 }
             }
         }
@@ -56,7 +56,7 @@ public class EnemyBehavior : MonoBehaviour {
                 if (canHit)
                 {
                     stopped = false;
-                    StartCoroutine(Hit(50));
+                    StartCoroutine(Hit(1));
                 }
             }
         }
@@ -68,7 +68,7 @@ public class EnemyBehavior : MonoBehaviour {
                 if (canHit)
                 {
                     stopped = false;
-                    StartCoroutine(Hit(0));
+                    StartCoroutine(Hit(3));
                 }
             }
         }

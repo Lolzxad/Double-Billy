@@ -1,4 +1,6 @@
-Base path: C:/Program Files/Unity/Hub/Editor/2018.2.12f1/Editor/Data
+Base path: D:/_Boulot/Unity 2.12/Editor/Data
+Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -23,4 +25,5 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
-Cmd: initializeCompiler
+=======
+>>>>>>> master
