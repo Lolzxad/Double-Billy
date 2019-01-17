@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Level 1.unity
+- path: Assets/Naga_Assets/Scenes/Naga_Main_Menu_Scene.unity
   isLoaded: 1
   isActive: 1
