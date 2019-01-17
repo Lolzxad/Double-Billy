@@ -72,7 +72,7 @@
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Main_Menu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Player_Stats.cs" />
     <Reference Include="Cinemachine">
-      <HintPath>D:/Double-Billy Jam/Double-Billy/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>C:/Users/Adel/Documents/GitHub/Double-Billy/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Adel/Documents/GitHub/Double-Billy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
@@ -82,15 +82,6 @@
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/Adel/Documents/GitHub/Double-Billy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/Double-Billy Jam/Double-Billy/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Adel/Documents/GitHub/Double-Billy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>C:/Users/Adel/Documents/GitHub/Double-Billy/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>C:/Users/Adel/Documents/GitHub/Double-Billy/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
