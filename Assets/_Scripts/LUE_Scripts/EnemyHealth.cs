@@ -29,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
     //Stats de l'ennemi 
     [SerializeField]
     float enemyMaxHealth = 5f;
+    [SerializeField]
     float enemyHealth = 5f;
 
     //Stats de dégâts
@@ -59,21 +60,25 @@ public class EnemyHealth : MonoBehaviour
         rangeKickCollider = rangeKick.GetComponent<Collider>();
     }
 
-    private void OnTriggerStay(Collider other, string punchKickGrab)
+    private void OnTriggerStay(Collider other)
     {
-        if ((punchKickGrab == "punch" || punchKickGrab == "punch2") && other.tag == "Player")
+        if (other.tag == "Player")
+        {
+            print("i    qbwciqbviqlevf");
+        }
+        if ((Input.GetButtonDown("punch") || Input.GetButtonDown("punch2")) && other.tag == "Player")
         {
             EnemyHealthLoss(punchDamage);
             coroutine = FreezeHP(punchKnockbackTime);
             StartCoroutine(coroutine);
         }
-        else if ((punchKickGrab == "kick" || punchKickGrab == "kick2") && other.tag == "Player")
+        else if ((Input.GetButtonDown("kick") || Input.GetButtonDown("kick2")) && other.tag == "Player")
         {
             EnemyHealthLoss(kickDamage);
             coroutine = FreezeHP(kickKnockbackTime);
             StartCoroutine(coroutine);
         }
-        else if ((punchKickGrab == "grab" || punchKickGrab == "grab2") && other.tag == "Player")
+        else if ((Input.GetButtonDown("grab") || Input.GetButtonDown("grab2")) && other.tag == "Player")
         {
             EnemyHealthLoss(grabDamage);
             coroutine = FreezeHP(grabKnockbackTime);
