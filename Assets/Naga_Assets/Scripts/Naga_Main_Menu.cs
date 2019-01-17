@@ -60,7 +60,7 @@ public class Naga_Main_Menu : MonoBehaviour
                 eS.SetSelectedGameObject(firstQuitMenuButton);
             }
 
-            if (Input.GetButtonDown("Menu"))
+            if (Input.GetButtonDown("Menu") || Input.GetButtonDown("Submit"))
             {
                 buttons.SetActive(true);
                 startMenu.SetActive(false);

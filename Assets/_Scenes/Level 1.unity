@@ -257,11 +257,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7c7b46e1bae094c975ba311e850e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p1Money: 0
   groundCheck: {fileID: 1033836616}
   rangeGrab: {fileID: 331819190}
   rangePunch: {fileID: 1659595469}
   rangeKick: {fileID: 256659342}
   enemyMaxHealth: 5
+  enemyHealth: 5
   punchDamage: 1
   kickDamage: 2
   grabDamage: 3
@@ -564,7 +566,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 407547681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7383835, y: 0.91799694, z: 0.9609375}
+  m_LocalPosition: {x: -2.738383, y: 0.91799694, z: 0.9609375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 802374272}
@@ -805,7 +807,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 576484485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.412334, y: -4.9575, z: -13.78}
+  m_LocalPosition: {x: -13.050393, y: -4.9575, z: -13.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1263353204}
@@ -1943,7 +1945,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988cbd87547ece94aba49349464d4533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  percentHP: 0
   playerHP: 100
+  lP: 10
+  p1Money: 10
+  endMenu: {fileID: 0}
 --- !u!1 &1263353203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +1973,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1263353203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14169693, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1328481306}
