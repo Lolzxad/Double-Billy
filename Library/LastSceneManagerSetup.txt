@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/_Scenes/Level 1.unity
-=======
-- path: Assets/Naga_Assets/Scenes/Naga_UI_Scene.unity
->>>>>>> master
+- path: Assets/_Scenes/LUE_TestScene.unity
   isLoaded: 1
   isActive: 1
