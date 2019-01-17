@@ -15,7 +15,10 @@ public class EnemyBehavior : MonoBehaviour {
     int Attack;
     public AudioClip MusicClip;
     public AudioSource MusicSource;
-    int moveTreeHash = Animator.StringToHash("Base Layer.MoveTree");
+    Animator anim;
+    Rigidbody rb;
+    SpriteRenderer spr;
+
 
     // Use this for initialization
     void Start () {
@@ -24,18 +27,18 @@ public class EnemyBehavior : MonoBehaviour {
         playerHealth = thePlayer.GetComponent<PlayerHealth>();
         AttackChoose();
         MusicSource.clip = MusicClip;
+        rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        spr = GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        AnimatorStateInfo animStateInfo = anim.GetCurrentAnimatorStateInfo(0);
         float step = speed * Time.deltaTime;
 
         if (follow)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            anim.SetTrigger("Move");
         }
 	}
 

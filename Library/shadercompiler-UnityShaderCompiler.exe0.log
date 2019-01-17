@@ -4,6 +4,7 @@ Base path: D:/_Boulot/Unity 2.12/Editor/Data
 Base path: C:/Program Files/Unity/Hub/Editor/2018.2.12f1/Editor/Data
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+<<<<<<< Updated upstream
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -31,3 +32,5 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 >>>>>>> master
+=======
+>>>>>>> Stashed changes
