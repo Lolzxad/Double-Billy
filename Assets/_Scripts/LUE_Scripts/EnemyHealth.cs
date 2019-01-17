@@ -29,7 +29,7 @@ public class EnemyHealth : MonoBehaviour
     //Stats de l'ennemi 
     [SerializeField]
     float enemyMaxHealth = 5f;
-    float enemyHealth = 75f;
+    float enemyHealth = 5f;
 
     //Stats de dégâts
     [SerializeField]
