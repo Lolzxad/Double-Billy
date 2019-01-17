@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     private Rigidbody2D rb2d;
+    GameObject thePlayer;
+    public int p1Money;
     private bool isGrounded;
     //private bool leftPlayer = false;
     //private bool rightPlayer = false;
@@ -90,7 +92,8 @@ public class EnemyHealth : MonoBehaviour
         {
             //empêche de passer trop loin sous 0 pour les tests
             enemyHealth = 0;
-
+            thePlayer.GetComponent<PlayerHealth>().p1Money += 236;
+            Destroy(gameObject);
             //fédétruc de quand on est mort
         }
     }

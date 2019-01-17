@@ -54,7 +54,7 @@ public class Naga_Scoring_endgame : MonoBehaviour {
     void OnGUI()
     {
         GUILayout.Space(top/2);
-        //score = 
+        score = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().p1Money.ToString();
         GUILayout.BeginHorizontal();
         GUILayout.Label("Name :");
         name = GUILayout.TextField(name);

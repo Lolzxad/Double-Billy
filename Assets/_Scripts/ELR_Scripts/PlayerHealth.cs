@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 
     //Varriables
     //Vie
-    //[HideInInspector]
+    [HideInInspector]
     public float percentHP;
     private float currentPercentHP;
     private int basicLifePoints = 50;
@@ -15,10 +15,9 @@ public class PlayerHealth : MonoBehaviour {
     public float playerHP = 50;
     [SerializeField]
     private int lP = 10;
+    //private int p1Score = 0;
     [SerializeField]
-    private int p1Score = 0;
-    [SerializeField]
-    private int p1Money = 10;
+    public int p1Money = 10;
     public GameObject endMenu;
 
 
@@ -26,7 +25,7 @@ public class PlayerHealth : MonoBehaviour {
     void Update()
     {
         GameObject.Find("LP - Text").GetComponent<Text>().text = lP.ToString();
-        GameObject.Find("P1Score - Text").GetComponent<Text>().text = p1Score.ToString();
+        //GameObject.Find("P1Score - Text").GetComponent<Text>().text = p1Score.ToString();
         GameObject.Find("P1$Score - Text").GetComponent<Text>().text = p1Money.ToString();
 
         currentPercentHP = playerHP / basicLifePoints;
