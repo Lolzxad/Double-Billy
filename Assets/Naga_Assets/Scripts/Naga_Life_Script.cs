@@ -20,7 +20,7 @@ public class Naga_Life_Script : MonoBehaviour
 	
 	void Update ()
     {
-        percentHP = GameObject.Find("Player").GetComponent<Naga_Player_Stats>().percentHP;
+        percentHP = GameObject.Find("Player").GetComponent<PlayerHealth>().percentHP;
         gaugeHP.fillAmount = percentHP;
     }
 }

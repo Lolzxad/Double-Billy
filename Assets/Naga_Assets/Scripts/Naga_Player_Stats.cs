@@ -15,11 +15,11 @@ public class Naga_Player_Stats : MonoBehaviour
     [SerializeField]
     private float currentLife;
     [SerializeField]
-    private int lP = 0;
+    private int lP = 10;
     [SerializeField]
     private int p1Score = 0;
     [SerializeField]
-    private int p1Money = 0;
+    private int p1Money = 10;
 
     // Use this for initialization
     void Start ()

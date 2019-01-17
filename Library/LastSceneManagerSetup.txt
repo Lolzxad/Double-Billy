@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/LUE_TestScene.unity
+- path: Assets/Naga_Assets/Scenes/Naga_UI_Scene.unity
   isLoaded: 1
   isActive: 1
