@@ -15,7 +15,6 @@ public class EnemyBehavior : MonoBehaviour {
     int Attack;
     public AudioClip MusicClip;
     public AudioSource MusicSource;
-    Animator anim;
     Rigidbody rb;
     SpriteRenderer spr;
 
