@@ -7,6 +7,7 @@ public class EnemyBehavior : MonoBehaviour {
     Transform target;
     GameObject thePlayer;
     PlayerHealth playerHealth;
+    Animator anim;
     float speed = 2f;
     bool follow = true;
     bool canHit = true;
@@ -22,7 +23,8 @@ public class EnemyBehavior : MonoBehaviour {
         playerHealth = thePlayer.GetComponent<PlayerHealth>();
         AttackChoose();
         MusicSource.clip = MusicClip;
-    }
+        anim = thePlayer.GetComponent<Animator>();
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -114,6 +116,7 @@ public class EnemyBehavior : MonoBehaviour {
         playerHealth.playerHP -= damage;
         MusicSource.Play();
         yield return new WaitForSeconds(1.0f);
+        anim.SetBool("Damage", false);
         canHit = true;
         AttackChoose();
     }
