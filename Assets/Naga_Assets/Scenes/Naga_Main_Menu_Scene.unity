@@ -1888,7 +1888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   play: 2
   score: 1
-  play2: 3
+  play2: 2
   quitMenu: {fileID: 1604837543}
   startMenu: {fileID: 1512766348}
   creditMenu: {fileID: 950501586}
