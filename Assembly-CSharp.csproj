@@ -73,23 +73,28 @@
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Life_Script.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Main_Menu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Player_Stats.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Score_Manager.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Scoring_endgame.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Scoring_Menu.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Scoring_UI.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Scoring_UI1.cs" />
     <Reference Include="Cinemachine">
-      <HintPath>D:/_Boulot/GD/Double-Billy/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/_Boulot/GD/Double-Billy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/_Boulot/GD/Double-Billy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/_Boulot/GD/Double-Billy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/_Boulot/GD/Double-Billy/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/_Boulot/GD/Double-Billy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/En developement/Double-Billy/Double-Billy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/_Boulot/Unity 2.12/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -290,10 +295,10 @@
       <HintPath>D:/_Boulot/Unity 2.12/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/Asus/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/edlal/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/Asus/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/edlal/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/_Boulot/Unity 2.12/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

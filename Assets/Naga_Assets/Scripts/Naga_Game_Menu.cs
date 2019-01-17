@@ -9,13 +9,9 @@ public class Naga_Game_Menu : MonoBehaviour
     [SerializeField]
     private int menu;
     [SerializeField]
-    private int option;
-    [SerializeField]
     private int currentScene;
     [SerializeField]
     private GameObject firstButton;
-    private GameObject respawn;
-    private GameObject player;
     public GameObject restartMenu;
     [SerializeField]
     private GameObject noButton;
@@ -49,7 +45,7 @@ public class Naga_Game_Menu : MonoBehaviour
             storeSelected = eS.firstSelectedGameObject;
         }
 
-        if (Input.GetButtonDown("Cancel") && restartMenu.activeInHierarchy)
+        if ((Input.GetButtonDown("Cancel") || Input.GetButtonDown("Menu")) && restartMenu.activeInHierarchy)
         {
             restartMenu.SetActive(false);
             eS.SetSelectedGameObject(firstButton);
@@ -59,11 +55,6 @@ public class Naga_Game_Menu : MonoBehaviour
     public void Menu()
     {
         SceneManager.LoadScene(menu);
-    }
-
-    public void Option ()
-    {
-        SceneManager.LoadScene(option);
     }
 
     public void Reload()
@@ -81,13 +72,6 @@ public class Naga_Game_Menu : MonoBehaviour
     {
         restartMenu.SetActive(false);
         eS.SetSelectedGameObject(firstButton);
-    }
-
-    public void Return()
-    {
-        respawn = GameObject.FindGameObjectWithTag("Respawn");
-        player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = respawn.transform.position;
     }
 
 }

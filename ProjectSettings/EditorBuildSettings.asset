@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Naga_Assets/Scenes/Naga_Main_Menu_Scene.unity
     guid: 9b82038e2b451764f8a1416df2cb0a10
+  - enabled: 1
+    path: Assets/Naga_Assets/Scenes/Test Scoring.unity
+    guid: df96f155e5ef51844b8cc7189eb371c6
   m_configObjects: {}

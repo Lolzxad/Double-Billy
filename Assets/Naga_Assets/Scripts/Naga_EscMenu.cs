@@ -5,9 +5,10 @@ using UnityEngine.EventSystems;
 
 public class Naga_EscMenu : MonoBehaviour
 {
+
+    //Variables
     public GameObject restartMenu;
     public GameObject escapeMenu;
-    public GameObject playerUI;
 
     void Awake()
     {
@@ -23,7 +24,6 @@ public class Naga_EscMenu : MonoBehaviour
             if (Input.GetButtonDown("Menu"))
             {
                 escapeMenu.SetActive(true);
-                playerUI.SetActive(false);
                 Time.timeScale = 0;
             }
 
@@ -32,11 +32,10 @@ public class Naga_EscMenu : MonoBehaviour
         else if(escapeMenu.activeInHierarchy && !restartMenu.activeInHierarchy)
         {
 
-            if (Input.GetButtonDown("Menu"))
+            if (Input.GetButtonDown("Menu") || Input.GetButtonDown("Cancel"))
             {
                 restartMenu.SetActive(false);
                 escapeMenu.SetActive(false);
-                playerUI.SetActive(true);
                 Time.timeScale = 1;
             }
 
