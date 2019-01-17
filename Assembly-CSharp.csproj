@@ -65,12 +65,6 @@
     <Compile Include="Assets\_Scripts\ELR_Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\_Scripts\ELR_Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\_Scripts\LUE_Scripts\EnemyHealth.cs" />
-    <Compile Include="Assets\Adel_Assets\Scripts\Perspective2DSortMode.cs" />
-    <Compile Include="Assets\Naga_Assets\Scripts\Naga_EscMenu.cs" />
-    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Game_Menu.cs" />
-    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Life_Script.cs" />
-    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Main_Menu.cs" />
-    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Player_Stats.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/_Boulot/GD/Double-Billy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
