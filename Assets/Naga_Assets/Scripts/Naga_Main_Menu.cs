@@ -13,6 +13,8 @@ public class Naga_Main_Menu : MonoBehaviour
     [SerializeField]
     private int play2;
 
+    public AudioClip MusicClip;
+    public AudioSource MusicSource;
 
     public GameObject quitMenu;
     public GameObject startMenu;
@@ -29,10 +31,15 @@ public class Naga_Main_Menu : MonoBehaviour
     void Start()
     {
         storeSelected = firstButton;
+        MusicSource.clip = MusicClip;
+
+        MusicSource.Play();
+
     }
 
     void Update()
     {
+
         if (eS.currentSelectedGameObject != storeSelected)
         {
             if (eS.currentSelectedGameObject == null)
