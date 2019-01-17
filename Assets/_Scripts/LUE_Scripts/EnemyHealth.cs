@@ -6,8 +6,12 @@ public class EnemyHealth : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     private bool isGrounded;
+    private bool leftPlayer = false;
+    private bool rightPlayer = false;
 
-    //Initialisation enfants
+    private IEnumerator coroutine;
+
+    #region Initialisation enfants
     public GameObject groundCheck;
     public GameObject leftSide;
     public GameObject rightSide;
@@ -20,13 +24,25 @@ public class EnemyHealth : MonoBehaviour
     private Collider rangeGrabCollider;
     private Collider rangePunchCollider;
     private Collider rangeKickCollider;
+    #endregion
 
     //Stats de l'ennemi 
     [SerializeField]
-    float enemyMaxHealth = 100f;
+    float enemyMaxHealth = 5f;
     float enemyHealth = 75f;
+
+    //Stats de dégâts
     [SerializeField]
-    float enemyHit = 100f;
+    float punchDamage = 1f;
+    [SerializeField]
+    float kickDamage = 2f;
+    [SerializeField]
+    float grabDamage = 3f;
+
+    float punchKnockbackTime = 0.2f;
+    float kickKnockbackTime = 0.4f;
+    float grabKnockbackTime = 0.6f;
+
 
     private void Start()
     {
@@ -38,6 +54,35 @@ public class EnemyHealth : MonoBehaviour
         rangeGrabCollider = rangeGrab.GetComponent<Collider>();
         rangePunchCollider = rangePunch.GetComponent<Collider>();
         rangeKickCollider = rangeKick.GetComponent<Collider>();
+    }
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if(other==leftCollider)
+    }*/
+
+    private void OnTriggerStay(Collider other, string punchKickGrab, Collider side)
+    {
+        if ((punchKickGrab == "punch" || punchKickGrab == "punch2") && other.tag == "Player")
+        {
+            EnemyHealthLoss(punchDamage);
+            if (leftPlayer)
+            {
+                
+            }
+            else if (rightPlayer)
+            {
+
+            }
+        }
+        else if ((punchKickGrab == "kick" || punchKickGrab == "kick2") && other.tag == "Player")
+        {
+            EnemyHealthLoss(kickDamage);
+        }
+        else if ((punchKickGrab == "grab" || punchKickGrab == "grab2") && other.tag == "Player")
+        {
+            EnemyHealthLoss(grabDamage);
+        }
     }
 
     public void EnemyHealthLoss(float hitReceived)
@@ -54,6 +99,20 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    
+    /*private IEnumerator Knockback(float waitTime)
+    {
+        if (leftCollider.tag == "Player")
+        {
 
+        }
+        else if (rightCollider.tag == "Player")
+        {
+
+        }
+    }*/
+
+    /*private IEnumerator Death()
+    {
+
+    }/*
 }
