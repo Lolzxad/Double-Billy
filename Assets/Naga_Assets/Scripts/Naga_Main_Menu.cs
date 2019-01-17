@@ -32,7 +32,6 @@ public class Naga_Main_Menu : MonoBehaviour
     {
         storeSelected = firstButton;
         MusicSource.clip = MusicClip;
-
         MusicSource.Play();
 
     }
@@ -67,7 +66,7 @@ public class Naga_Main_Menu : MonoBehaviour
                 eS.SetSelectedGameObject(firstQuitMenuButton);
             }
 
-            if (Input.GetButtonDown("Menu") || Input.GetButtonDown("Submit"))
+            else if (Input.GetButtonDown("Menu") || Input.GetButtonDown("Submit"))
             {
                 buttons.SetActive(true);
                 startMenu.SetActive(false);

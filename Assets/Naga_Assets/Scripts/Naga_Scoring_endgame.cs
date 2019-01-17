@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Naga_Scoring_endgame : MonoBehaviour {
 
@@ -17,6 +18,8 @@ public class Naga_Scoring_endgame : MonoBehaviour {
     private GameObject firstButton;
     public EventSystem eS;
     private GameObject storeSelected;
+    [SerializeField]
+    private GameObject pseudo;
 
     // Use this for initialization
     void Start ()
@@ -55,10 +58,11 @@ public class Naga_Scoring_endgame : MonoBehaviour {
     {
         GUILayout.Space(top/2);
         score = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().p1Money.ToString();
-        GUILayout.BeginHorizontal();
-        GUILayout.Label("Name :");
-        name = GUILayout.TextField(name);
-        GUILayout.EndHorizontal();
+        //GUILayout.BeginHorizontal();
+        //GUILayout.Label("Name :");
+        name = pseudo.GetComponent<Text>().text;
+        //name = GUILayout.TextField(name);
+        //GUILayout.EndHorizontal();
 
         /*GUILayout.BeginHorizontal();
         GUILayout.Label("Score :");

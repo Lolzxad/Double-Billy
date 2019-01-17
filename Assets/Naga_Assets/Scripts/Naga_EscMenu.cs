@@ -18,7 +18,7 @@ public class Naga_EscMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!escapeMenu.activeInHierarchy)
+        if (!escapeMenu.activeInHierarchy && !GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().endMenu.activeInHierarchy)
         {
 
             if (Input.GetButtonDown("Menu"))
