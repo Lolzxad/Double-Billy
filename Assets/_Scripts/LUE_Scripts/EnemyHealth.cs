@@ -63,6 +63,10 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerStay(Collider other, string punchKickGrab)
     {
+        if (other.tag == "Player")
+        {
+            print("i    qbwciqbviqlevf");
+        }
         if ((punchKickGrab == "punch" || punchKickGrab == "punch2") && other.tag == "Player")
         {
             EnemyHealthLoss(punchDamage);
