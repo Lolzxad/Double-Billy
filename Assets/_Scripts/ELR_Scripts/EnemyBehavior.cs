@@ -12,14 +12,17 @@ public class EnemyBehavior : MonoBehaviour {
     bool canHit = true;
     bool stopped = false;
     int Attack;
+    public AudioClip MusicClip;
+    public AudioSource MusicSource;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         playerHealth = thePlayer.GetComponent<PlayerHealth>();
         AttackChoose();
-	}
+        MusicSource.clip = MusicClip;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -109,6 +112,7 @@ public class EnemyBehavior : MonoBehaviour {
             yield break;    
         }
         playerHealth.playerHP -= damage;
+        MusicSource.Play();
         yield return new WaitForSeconds(1.0f);
         canHit = true;
         AttackChoose();
