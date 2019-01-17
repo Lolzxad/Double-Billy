@@ -68,6 +68,7 @@
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Main_Menu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Player_Stats.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Score_Manager.cs" />
+    <Compile Include="Assets\Naga_Assets\Scripts\Naga_Scoring_endgame.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Scoring_Menu.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Scoring_UI.cs" />
     <Compile Include="Assets\Naga_Assets\Scripts\Naga_Scoring_UI1.cs" />
