@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\AAY_Scripts\MapFar.cs" />
+    <Compile Include="Assets\_Scripts\AAY_Scripts\SoundEffect.cs" />
     <Compile Include="Assets\_Scripts\ELR_Scripts\EnemyBehavior.cs" />
     <Compile Include="Assets\_Scripts\ELR_Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\_Scripts\ELR_Scripts\PlayerMovement.cs" />
